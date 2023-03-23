@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import Nav from "../components/nav";
-import BreathingExercise from "@/components/BreathingExercise";
-import InfoCard from "@/components/InfoCard";
-import FourSevenEightInfo from "@/components/FourSevenEightInfo";
-import FourFourFourInfo from "@/components/FourFourFourInfo";
-import BuyMeACoffee from "@/components/BuyMeACoffee";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useRouter } from "next/router";
+import BuyMeACoffee from "@/components/BuyMeACoffee";
 
 export default function Home() {
-  const [selectedBreathingTechnique, setSelectedBreathingTechnique] =
-    useState("4-7-8");
+  const router = useRouter();
 
-  const handleTechniqueChange = (e) => {
-    setSelectedBreathingTechnique(e.target.value);
+  const navigateToExercise = (path) => {
+    router.push(path);
   };
 
   return (
@@ -29,22 +20,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav
-        selectedBreathingTechnique={selectedBreathingTechnique}
-        handleTechniqueChange={handleTechniqueChange}
-      />
-      {/* Conditionally render the title of the selected technique */}
-      <h1 className="text-center text-2xl mt-4">
-        {selectedBreathingTechnique === "4-7-8"
-          ? "4-7-8 Breathing Technique"
-          : "4-4-4-4-4 Box Breathing Technique"}
-      </h1>
-      <BreathingExercise technique={selectedBreathingTechnique} />
-      {/* Conditionally render the info components */}
-      {selectedBreathingTechnique === "4-7-8" && <FourSevenEightInfo />}
-      {selectedBreathingTechnique === "4-4-4" && <FourFourFourInfo />}
-      <InfoCard />
-      <BuyMeACoffee />
+      <Nav />
+      <div className="container mx-auto">
+        <h1 className="text-center text-4xl mt-12 mb-6">
+          Select a Breathing Technique
+        </h1>
+        <div className="flex justify-center">
+          <button
+            onClick={() => navigateToExercise("/four-seven-eight")}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+          >
+            4-7-8 Breathing Technique
+          </button>
+          <button
+            onClick={() => navigateToExercise("/four-four-four")}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            4-4-4 Box Breathing Technique
+          </button>
+        </div>
+        <BuyMeACoffee />
+      </div>
+
       <Footer />
     </>
   );
