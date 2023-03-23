@@ -1,17 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import Nav from "../components/nav";
+import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/router";
 import BuyMeACoffee from "@/components/BuyMeACoffee";
+import Introduction from "@/components/Introduction";
+import Instructions from "@/components/Instructions";
+import Body from "@/components/Body";
 
 export default function Home() {
-  const router = useRouter();
-
-  const navigateToExercise = (path) => {
-    router.push(path);
-  };
-
   return (
     <>
       <Head>
@@ -20,29 +16,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <div className="container mx-auto">
-        <h1 className="text-center text-4xl mt-12 mb-6">
-          Select a Breathing Technique
-        </h1>
-        <div className="flex justify-center">
-          <button
-            onClick={() => navigateToExercise("/four-seven-eight")}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-          >
-            4-7-8 Breathing Technique
-          </button>
-          <button
-            onClick={() => navigateToExercise("/four-four-four")}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            4-4-4 Box Breathing Technique
-          </button>
-        </div>
-        <BuyMeACoffee />
-      </div>
-
-      <Footer />
+      <main className="min-h-screen">
+        <section className="">
+          <Nav />
+          <Introduction />
+          <div className="container mx-auto px-4 py-8">
+            <Instructions />
+            <Body />
+            <BuyMeACoffee />
+          </div>
+          <Footer />
+        </section>
+      </main>
     </>
   );
 }
