@@ -1,11 +1,11 @@
+// pages/index.js
 import React from "react";
 import Head from "next/head";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import BuyMeACoffee from "@/components/BuyMeACoffee";
+import Layout from "@/components/Layout";
 import Introduction from "@/components/Introduction";
 import Instructions from "@/components/Instructions";
 import Body from "@/components/Body";
+import BuyMeACoffee from "@/components/BuyMeACoffee";
 
 export default function Home() {
   return (
@@ -16,18 +16,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen">
-        <section className="">
-          <Nav />
-          <Introduction />
-          <div className="container mx-auto px-4 py-8">
-            <Instructions />
-            <Body />
-            <BuyMeACoffee />
-          </div>
-          <Footer />
-        </section>
-      </main>
+      <Layout intro={<Introduction />}>
+        <div className="container mx-auto px-4 py-8">
+          <Instructions />
+          <Body />
+          <BuyMeACoffee />
+        </div>
+      </Layout>
     </>
   );
 }

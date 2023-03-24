@@ -20,7 +20,7 @@ const Introduction = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-teal-500 p-12 shadow-md mb-5-6 ">
+    <div className="bg-gradient-to-r from-cyan-500 to-teal-500 p-12 shadow-md w-full">
       <motion.h1
         className="text-center text-4xl font-bold mb-8 text-white"
         variants={fadeInUp}
