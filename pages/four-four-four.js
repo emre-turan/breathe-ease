@@ -12,8 +12,10 @@ export default function FourFourFour() {
         {/* Add other meta tags */}
       </Head>
       <Layout>
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-center text-2xl mt-4">4-4-4-4 Box Breathing Technique</h1>
+        <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+          <h1 className="text-center text-2xl m-4">
+            4-4-4-4 Box Breathing Technique
+          </h1>
           <BreathingExercise technique="4-4-4" />
           <InfoCard technique="4-4-4" />
         </div>

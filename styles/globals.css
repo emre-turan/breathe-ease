@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.breathe-ease-logo {
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  

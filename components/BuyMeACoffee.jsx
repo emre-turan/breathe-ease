@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BuyMeACoffee = () => {
   return (
-    <div className="text-center mt-10 mb-5 flex justify-center ">
+    <div className="text-center mt-10 mb-5 flex justify-center  ">
       <a
         href="https://www.buymeacoffee.com/emreturann"
         target="_blank"

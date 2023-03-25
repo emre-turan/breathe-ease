@@ -3,7 +3,6 @@ import React from "react";
 const FourSevenEightInfo = () => {
   return (
     <div>
-      <h2>4-7-8 Breathing Technique</h2>
       <p>
         The 4-7-8 Breathing Technique, also known as the Relaxing Breath, is a
         simple yet powerful method that helps you reduce stress, ease anxiety,
@@ -24,24 +23,25 @@ const FourSevenEightInfo = () => {
       </p>
       <ol>
         <li>
-          Find a comfortable position, either sitting or lying down, with your
-          back straight and your shoulders relaxed.
+          <strong>Get comfortable:</strong> Sit or lie down in a position with
+          your back straight and your shoulders relaxed.
         </li>
         <li>
-          Close your eyes and take a deep breath in through your nose for 4
-          seconds, allowing your chest and abdomen to expand.
+          <strong>Inhale for 4 seconds:</strong> Close your eyes and inhale
+          through your nose, allowing your chest and abdomen to expand.
         </li>
         <li>
-          Hold your breath for 7 seconds, keeping your body still and your mind
-          focused on your breath.
+          <strong>Hold your breath for 7 seconds:</strong> Keep your body still
+          and your mind focused on your breath.
         </li>
         <li>
-          Exhale slowly and completely through your mouth for 8 seconds, making
-          a gentle &quot;whoosh&quot; sound as you release the air.
+          <strong>Exhale for 8 seconds:</strong> Slowly and completely exhale
+          through your mouth, making a gentle &quot;whoosh&quot; sound as you release the
+          air.
         </li>
         <li>
-          Repeat the process for at least four full breath cycles, or continue
-          for several minutes until you feel calm and relaxed.
+          <strong>Repeat the process:</strong> Continue for at least four full
+          breath cycles, or until you feel calm and relaxed.
         </li>
       </ol>
       <p>
@@ -54,10 +54,10 @@ const FourSevenEightInfo = () => {
         improved mental clarity, increased emotional resilience, and a greater
         sense of well-being. However, it&apos;s important to remember that the
         technique may not work for everyone, and individual results may vary. As
-        with any new practice, it&apos;s best to start slowly and gradually
-        increase the duration and frequency of your sessions. Our app is
-        designed to support you on this journey, making it easy to develop and
-        maintain a consistent breathing practice.
+        with any new practice, it&apos;s best to start slowly and gradually increase
+        the duration and frequency of your sessions. Our app is designed to
+        support you on this journey, making it easy to develop and maintain a
+        consistent breathing practice.
       </p>
       <p>
         Sources:

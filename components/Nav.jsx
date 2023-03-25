@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
-
 const Nav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -30,7 +29,7 @@ const Nav = () => {
       <nav className="p-6">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" passHref legacyBehavior>
-            <a className="text-white font-bold text-xl cursor-pointer">
+            <a className="text-white font-bold text-3xl cursor-pointer breathe-ease-logo">
               Breathe-ease
             </a>
           </Link>

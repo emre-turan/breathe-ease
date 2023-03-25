@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FourSevenEightInfo from "./FourSevenEightInfo";
 import FourFourFourInfo from "./FourFourFourInfo";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const InfoCard = ({ technique }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,25 @@ const InfoCard = ({ technique }) => {
   }
 
   return (
-    <div>
-      <button onClick={toggleCard} className="bg-blue-500 text-white px-3 py-2 rounded">
-        {title}
-      </button>
-      {isOpen && <div className="bg-white p-4 mt-4 rounded shadow">{content}</div>}
+    <div className="w-full sm:w-3/4 md:w-2/3  mx-auto my-10 p-6 rounded-lg shadow-md bg-white">
+      <div
+        className="cursor-pointer flex items-center justify-between"
+        onClick={toggleCard}
+      >
+        <h2 className="text-xl font-semibold mb-4 text-cyan-800">
+          {title}
+        </h2>
+        {isOpen ? (
+          <FiChevronUp className="text-3xl text-cyan-600" />
+        ) : (
+          <FiChevronDown className="text-3xl text-cyan-600" />
+        )}
+      </div>
+      {isOpen && (
+        <div className="transition-all duration-500 ease-in-out mt-4">
+          {content}
+        </div>
+      )}
     </div>
   );
 };

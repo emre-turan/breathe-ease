@@ -3,7 +3,6 @@ import React from "react";
 const FourFourFourInfo = () => {
   return (
     <div>
-      <h2>4-4-4-4 Box Breathing Technique</h2>
       <p>
         The 4-4-4-4 Box Breathing Technique, also known as Square Breathing or
         Four-Square Breathing, is a powerful stress reliever and concentration
@@ -24,27 +23,28 @@ const FourFourFourInfo = () => {
       </p>
       <ol>
         <li>
-          Find a comfortable position, either sitting or lying down, with your
-          back straight and your shoulders relaxed.
+          <strong>Get comfortable:</strong> Sit or lie down in a position with
+          your back straight and your shoulders relaxed.
         </li>
         <li>
-          Close your eyes and inhale slowly through your nose for 4 seconds,
-          feeling your chest and abdomen expand.
+          <strong>Inhale for 4 seconds:</strong> Close your eyes and inhale
+          slowly through your nose, feeling your chest and abdomen expand.
         </li>
         <li>
-          Hold your breath for 4 seconds, maintaining a relaxed posture and
-          keeping your mind focused on your breath.
+          <strong>Hold your breath for 4 seconds:</strong> Maintain a relaxed
+          posture and keep your mind focused on your breath.
         </li>
         <li>
-          Exhale slowly and completely through your mouth or nose for 4 seconds,
-          feeling your chest and abdomen contract.
+          <strong>Exhale for 4 seconds:</strong> Slowly and completely exhale
+          through your mouth or nose, feeling your chest and abdomen contract.
         </li>
         <li>
-          Hold your breath again for 4 seconds, staying relaxed and focused.
+          <strong>Hold your breath again for 4 seconds:</strong> Stay relaxed
+          and focused.
         </li>
         <li>
-          Repeat the process for several minutes or until you feel calm,
-          focused, and relaxed.
+          <strong>Repeat the process:</strong> Continue for several minutes or
+          until you feel calm, focused, and relaxed.
         </li>
       </ol>
       <p>
