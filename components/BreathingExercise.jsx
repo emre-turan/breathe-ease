@@ -79,7 +79,7 @@ const BreathingExercise = ({ technique }) => {
             if (step >= 0 && step < 4) {
               setAction("Inhale");
             } else if (step >= 4 && step < 11) {
-              setAction("Hold Your Breathe");
+              setAction("Hold Your Breath");
             } else {
               setAction("Exhale");
             }
@@ -89,7 +89,7 @@ const BreathingExercise = ({ technique }) => {
             if (step >= 0 && step < 4) {
               setAction("Inhale");
             } else if (step >= 4 && step < 8) {
-              setAction("Hold");
+              setAction("Hold Your Breath");
             } else if (step >= 8 && step < 12) {
               setAction("Exhale");
             } else {
@@ -152,7 +152,7 @@ const BreathingExercise = ({ technique }) => {
             <div className={styles.breatheAnimation}></div>
           </div>
         )}
-        <h1 className="text-4xl text-cyan-800 mb-9">{action}</h1>
+        <h1 className="text-4xl text-cyan-800 mb-9 text-center">{action}</h1>
         <h2 className="text-8xl text-teal-900 mb-4">{displayCounter()}</h2>
       </div>
       <button
