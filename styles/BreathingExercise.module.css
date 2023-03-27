@@ -1,0 +1,25 @@
+.breatheContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breatheAnimation {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(100, 149, 237, 0.3);
+  border-radius: 50%;
+  animation: breathe 4s infinite alternate;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

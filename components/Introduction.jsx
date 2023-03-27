@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
+import RotatingText from "react-rotating-text";
 
 const Introduction = () => {
   const fadeInUp = {
@@ -20,24 +21,27 @@ const Introduction = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-teal-500 p-12 shadow-md w-full">
-      <motion.h1
-        className="text-center text-6xl font-bold mb-8 text-white"
+    <div className="bg-gradient-to-r from-cyan-500 to-teal-500 p-12 shadow-md w-full h-96 flex flex-col justify-center items-center">
+      <m.h1
+        className="text-center text-5xl font-bold mb-8 text-white"
         variants={fadeInUp}
         initial="initial"
         animate="animate"
       >
-        Welcome to Breathe-Ease
-      </motion.h1>
-      <motion.p
+        Practice to{" "}
+        <RotatingText
+          items={["reduce anxiety", "reduce stress", "relax body", "relax mind"]}
+        />
+      </m.h1>
+      <m.p
         className="text-center text-lg mb-6 leading-8 text-white"
         variants={fadeInUp}
         initial="initial"
         animate="animate"
       >
         Breathe-Ease is a web application that helps you practice different
-        breathing techniques to relax and reduce stress.
-      </motion.p>
+        breathing methods to relax and reduce stress.
+      </m.p>
     </div>
   );
 };

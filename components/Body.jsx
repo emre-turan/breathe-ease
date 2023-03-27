@@ -15,7 +15,7 @@ const Body = () => {
         className="group bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative"
         onClick={() => navigateToExercise("/four-seven-eight")}
       >
-        <h2 className="text-xl mb-4 text-black">4-7-8 Breath</h2>
+        <h2 className="text-2xl mb-4 text-black">4-7-8 Breath</h2>
         <p className="text-gray-600 group-hover:text-black transition-colors duration-300">
           The 4-7-8 breathing technique, also known as “relaxing breath,”
           involves breathing in for 4 seconds, holding the breath for 7 seconds,
@@ -30,7 +30,7 @@ const Body = () => {
         className="group bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative"
         onClick={() => navigateToExercise("/four-four-four")}
       >
-        <h2 className="text-xl mb-4 text-black">4-4-4-4 Box Breath</h2>
+        <h2 className="text-2xl mb-4 text-black">4-4-4-4 Box Breath</h2>
         <p className="text-gray-600 group-hover:text-black transition-colors duration-300">
           The 4-4-4-4 breathing technique involves inhaling for 4 seconds,
           holding the breath for 4 seconds, exhaling for 4 seconds and holding

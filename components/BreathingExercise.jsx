@@ -1,4 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useSpring, animated, config } from "react-spring";
+
+const AnimatedCircle = () => {
+  const [circleSize, setCircleSize] = useState(0);
+
+  useEffect(() => {
+    const { innerWidth: width } = window;
+    setCircleSize(width / 2);
+  }, []);
+
+  const { innerWidth: width } = window;
+  const move = useRef(0);
+
+  const { x } = useSpring({
+    from: { x: 0 },
+    to: async (next) => {
+      while (1) {
+        await next({ x: 1, config: config.slow });
+        await next({ x: 2, config: config.slow });
+        await next({ x: 0, config: { duration: 0 } });
+      }
+    },
+  });
+
+  const rotation = x.to((x) => `${x * 180}deg`);
+  const translate = x.to([0, 1, 2], [0, circleSize / 6, 0]);
+
+  return (
+    <div style={{ position: "relative" }}>
+      {[...Array(8)].map((_, item) => (
+        <animated.div
+          key={item}
+          style={{
+            position: "absolute",
+            opacity: 0.15,
+            backgroundColor: "#d600d3",
+            width: circleSize,
+            height: circleSize,
+            borderRadius: circleSize / 2,
+            transform: `rotateZ(${rotation.interpolate(
+              (r) => item * 45 + parseInt(r)
+            )}deg) translate(${translate}px, ${translate}px)`,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+// Your existing BreathingExercise component code...
+
+import styles from "@/styles/BreathingExercise.module.css";
 
 const BreathingExercise = ({ technique }) => {
   const [count, setCount] = useState(-1);
@@ -95,7 +147,12 @@ const BreathingExercise = ({ technique }) => {
   return (
     <div className="min-h-[50vh] w-full sm:w-3/4 md:w-2/3 flex flex-col items-center justify-center bg-gradient-to-r from-cyan-200 via-teal-200 to-cyan-200 p-6 rounded-lg shadow-md mb-6">
       <div className="flex-grow flex flex-col items-center justify-center">
-        <h1 className="text-4xl text-cyan-800 mb-2">{action}</h1>
+        {!isRunning && (
+          <div className={styles.breatheContainer}>
+            <div className={styles.breatheAnimation}></div>
+          </div>
+        )}
+        <h1 className="text-4xl text-cyan-800 mb-9">{action}</h1>
         <h2 className="text-8xl text-teal-900 mb-4">{displayCounter()}</h2>
       </div>
       <button
