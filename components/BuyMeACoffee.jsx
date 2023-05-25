@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Bounce from 'react-reveal/Bounce';
 
 const BuyMeACoffee = () => {
   return (
+    <Bounce bottom>
     <div className="text-center m-5 flex justify-center  ">
       <a
         href="https://www.buymeacoffee.com/emreturann"
@@ -18,6 +20,7 @@ const BuyMeACoffee = () => {
         />
       </a>
     </div>
+    </Bounce>
   );
 };
 

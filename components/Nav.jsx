@@ -39,9 +39,7 @@ const Nav = () => {
               onClick={toggleDropdown}
               className="text-white p-2 rounded flex items-center transition duration-300 ease-in-out relative hover:underline"
             >
-              <span className="hidden sm:inline-block">
-                Breathing Methods
-              </span>
+              <span className="hidden sm:inline-block">Breathing Methods</span>
               <FaBars className="h-5 w-5 sm:hidden text-white" />
               <span className="absolute bottom-0 left-0 h-1 w-full bg-white transform scale-x-0 origin-left transition-all duration-300 ease-in-out group-hover:scale-x-100"></span>
             </button>

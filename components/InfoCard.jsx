@@ -12,10 +12,10 @@ const InfoCard = ({ technique }) => {
 
   let title, content;
   if (technique === "4-7-8") {
-    title = "What is the 4-7-8 Breathing Technique?";
+    title = "What is the 4-7-8 Breathing Method?";
     content = <FourSevenEightInfo />;
   } else if (technique === "4-4-4") {
-    title = "What is the 4-4-4-4 Breathing Technique?";
+    title = "What is the 4-4-4-4 Breathing Method?";
     content = <FourFourFourInfo />;
   }
 
@@ -25,9 +25,7 @@ const InfoCard = ({ technique }) => {
         className="cursor-pointer flex items-center justify-between"
         onClick={toggleCard}
       >
-        <h2 className="text-xl font-semibold mb-4 text-cyan-800">
-          {title}
-        </h2>
+        <h2 className="text-xl font-semibold mb-4 text-cyan-800">{title}</h2>
         {isOpen ? (
           <FiChevronUp className="text-3xl text-cyan-600" />
         ) : (
@@ -39,7 +37,7 @@ const InfoCard = ({ technique }) => {
           {content}
         </div>
       )}
-    </div>
+    </div>  
   );
 };
 
