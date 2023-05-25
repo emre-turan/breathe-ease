@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { FiArrowRight } from "react-icons/fi";
-import Fade from 'react-reveal/Fade';
 
 const Body = () => {
   const router = useRouter();
@@ -12,7 +11,6 @@ const Body = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-10">
-      <Fade left>
       <div
         className="group bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative"
         onClick={() => navigateToExercise("/four-seven-eight")}
@@ -28,8 +26,7 @@ const Body = () => {
           size={24}
         />
       </div>
-      </Fade>
-      <Fade right>
+
       <div
         className="group bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative"
         onClick={() => navigateToExercise("/four-four-four")}
@@ -45,7 +42,6 @@ const Body = () => {
           size={24}
         />
       </div>
-      </Fade>
     </div>
   );
 };
